@@ -1,0 +1,3 @@
+agregar boton cancelar que limpe los texbox en PROVEEDOR,CATEGORIA
+
+ICONOS DE PROPVEEDOR Y CATEGORIA

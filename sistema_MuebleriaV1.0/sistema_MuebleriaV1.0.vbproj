@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{12C292D6-C620-42BB-9F04-8CA340210C1F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Inicio.fmr_ventasVendedor</StartupObject>
+    <RootNamespace>Inicio</RootNamespace>
+    <AssemblyName>sistema_MuebleriaV1.0</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>sistema_MuebleriaV1.0.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>sistema_MuebleriaV1.0.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Modulos\Categoria.vb" />
+    <Compile Include="Modulos\conexion.vb" />
+    <Compile Include="Presentaciones\fmr_ventasVendedor.Designer.vb">
+      <DependentUpon>fmr_ventasVendedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\fmr_ventasVendedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\fmr_categoriaAdmin.Designer.vb">
+      <DependentUpon>fmr_categoriaAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\fmr_categoriaAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Producto.vb" />
+    <Compile Include="Modulos\Proveedor.vb" />
+    <Compile Include="Modulos\Usuario.vb" />
+    <Compile Include="Presentaciones\fmr_productoAdmin.Designer.vb">
+      <DependentUpon>fmr_productoAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\fmr_productoAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\fmr_productoVendedor.Designer.vb">
+      <DependentUpon>fmr_productoVendedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\fmr_productoVendedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\fmr_vendedorAdmin.Designer.vb">
+      <DependentUpon>fmr_vendedorAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\fmr_vendedorAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\Inicio_admin.Designer.vb">
+      <DependentUpon>Inicio_admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\Inicio_admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\Inicio_vendendor.Designer.vb">
+      <DependentUpon>Inicio_vendendor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\Inicio_vendendor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Presentaciones\Presentacion.Designer.vb">
+      <DependentUpon>Presentacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\Presentacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\fmr_proveedoresAdmin.Designer.vb">
+      <DependentUpon>fmr_proveedoresAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\fmr_proveedoresAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet1.vb">
+      <DependentUpon>SistemaMuebleriaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet10.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet11.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet12.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet13.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet14.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet15.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet16.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet3.vb">
+      <DependentUpon>SistemaMuebleriaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet7.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet8.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaMuebleriaDataSet9.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaMuebleriaDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tablaUsuario.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tablaUsuario.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Presentaciones\fmr_categoriaAdmin.resx">
+      <DependentUpon>fmr_categoriaAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\fmr_productoAdmin.resx">
+      <DependentUpon>fmr_productoAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\fmr_productoVendedor.resx">
+      <DependentUpon>fmr_productoVendedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\fmr_vendedorAdmin.resx">
+      <DependentUpon>fmr_vendedorAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\fmr_ventasVendedor.resx">
+      <DependentUpon>fmr_ventasVendedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\Inicio_admin.resx">
+      <DependentUpon>Inicio_admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\Inicio_vendendor.resx">
+      <DependentUpon>Inicio_vendendor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\Presentacion.resx">
+      <DependentUpon>Presentacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\fmr_proveedoresAdmin.resx">
+      <DependentUpon>fmr_proveedoresAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SistemaMuebleriaDataSet.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet.xss">
+      <DependentUpon>SistemaMuebleriaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet1.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet1.xss">
+      <DependentUpon>SistemaMuebleriaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet10.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet10.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet10.xss">
+      <DependentUpon>SistemaMuebleriaDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet11.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet11.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet11.xss">
+      <DependentUpon>SistemaMuebleriaDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet12.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet12.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet12.xss">
+      <DependentUpon>SistemaMuebleriaDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet13.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet13.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet13.xss">
+      <DependentUpon>SistemaMuebleriaDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet14.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet14.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet14.xss">
+      <DependentUpon>SistemaMuebleriaDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet15.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet15.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet15.xss">
+      <DependentUpon>SistemaMuebleriaDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet16.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet16.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet16.xss">
+      <DependentUpon>SistemaMuebleriaDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet2.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet2.xss">
+      <DependentUpon>SistemaMuebleriaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet3.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet3.xss">
+      <DependentUpon>SistemaMuebleriaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet4.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet4.xss">
+      <DependentUpon>SistemaMuebleriaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet5.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet5.xss">
+      <DependentUpon>SistemaMuebleriaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet6.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet6.xss">
+      <DependentUpon>SistemaMuebleriaDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet7.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet7.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet7.xss">
+      <DependentUpon>SistemaMuebleriaDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet8.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet8.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet8.xss">
+      <DependentUpon>SistemaMuebleriaDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet9.xsc">
+      <DependentUpon>SistemaMuebleriaDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaMuebleriaDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaMuebleriaDataSet9.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaMuebleriaDataSet9.xss">
+      <DependentUpon>SistemaMuebleriaDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="tablaUsuario.xsc">
+      <DependentUpon>tablaUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="tablaUsuario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tablaUsuario.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tablaUsuario.xss">
+      <DependentUpon>tablaUsuario.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vendedor.jpg" />
+    <None Include="Resources\admin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingresar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_out_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\presentacion1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\presentacion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\altaUsuario.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-editar-icono-6607-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar-icono-7412-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinImagen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono_carrito.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty_shopping_cart_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales_report_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria.jpg" />
+    <None Include="Resources\adelante-icono-4210-64.png" />
+    <Content Include="Resources\admin1.jpg" />
+    <Content Include="Resources\altaUsuario1.jpg" />
+    <None Include="Resources\proveedores.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
