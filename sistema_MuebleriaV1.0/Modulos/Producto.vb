@@ -32,6 +32,8 @@ Public Class Producto
         Dim cmd As New SqlCommand
         Dim auxAlta As Boolean = False
 
+        'agregar campo de origen de mercaderia "prod_origins" a la base de datos  para agrgar luego a form'
+
         Try
             conectado()
             cmd.CommandType = CommandType.Text
