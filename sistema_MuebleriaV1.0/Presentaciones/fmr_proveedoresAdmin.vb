@@ -2,9 +2,6 @@
     Private func As New Proveedor
     Private dt As New DataTable
 
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
 
     Private Sub Proveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'SistemaMuebleriaDataSet.Proveedor' Puede moverla o quitarla según sea necesario.
@@ -62,6 +59,7 @@
         End Try
     End Sub
 
+    'agregar al datagrid txt_contacto = (dg_proveedor.CurrentRow.Cells(5).Value para crear un input para ingresar id_contacto
 
     Private Sub rellenarTexbox()
         ' EP_error.Clear()
@@ -111,7 +109,7 @@
             End If
         End If
     End Sub
-
+    'Agrrgar a limpiar txt_contacto.Clear()'
 
     Private Sub limpiar()
 
