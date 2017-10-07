@@ -26,7 +26,7 @@ Public Class Proveedor
         Dim strSql As String
         Dim cmd As New SqlCommand
         Dim auxAlta As Boolean = False
-
+        'agregar en la base de datos de proveerdor el campo contacto como id_contacto por pedido de la empresa'
         Try
             conectado()
             cmd.CommandType = CommandType.Text
