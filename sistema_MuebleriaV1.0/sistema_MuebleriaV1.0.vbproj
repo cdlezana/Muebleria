@@ -79,6 +79,12 @@
   <ItemGroup>
     <Compile Include="Modulos\Categoria.vb" />
     <Compile Include="Modulos\conexion.vb" />
+    <Compile Include="Presentaciones\Commint_form.Designer.vb">
+      <DependentUpon>Commint_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\Commint_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentaciones\fmr_ventasVendedor.Designer.vb">
       <DependentUpon>fmr_ventasVendedor.vb</DependentUpon>
     </Compile>
@@ -256,6 +262,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Presentaciones\Commint_form.resx">
+      <DependentUpon>Commint_form.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentaciones\fmr_categoriaAdmin.resx">
       <DependentUpon>fmr_categoriaAdmin.vb</DependentUpon>
     </EmbeddedResource>
