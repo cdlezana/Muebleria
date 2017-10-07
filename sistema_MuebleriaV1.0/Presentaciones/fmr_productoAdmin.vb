@@ -167,7 +167,7 @@
         End If
     End Sub
 
-
+    'agregar a limpiar() txt_prod_origen.Clear() para limpiar el nuevo campo agregado
     Public Sub limpiar()
         txt_idProducto.Clear()
         txt_descripcion.Clear()
